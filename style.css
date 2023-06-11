@@ -1,0 +1,530 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+/*Multiples*/
+
+.pdng {
+  padding: 60px 30px 80px 30px;
+}
+
+.wht-clr {
+  color: #ffffff;
+}
+
+.pdng-bottom25 {
+  padding-bottom: 25px;
+}
+
+.pdng-bottom60 {
+  padding-bottom: 60px;
+}
+
+.trans {
+  transition: 0.3s;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.border4px {
+  border-radius: 4px;
+}
+
+/*----H     H  EEEEE  A       DDDD   EEEEE  RRRRR
+-----H     H  E      A A     D   D  E      R    R
+----HHHHHHH  EEE   AAAAA    D   D  EEE    RRRRR
+---H     H  E     A     A   D   D  E      R   R
+--H     H  E    A       A  D   D  E      R    R
+-H     H  EEE A         A DDDD   EEEEE  R     R*/
+
+/*burger navigace*/
+
+.header {
+  position: relative;
+}
+
+.header-content {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #33292a;
+  padding: 0 25px;
+  z-index: 1;
+}
+
+.nav-background a img {
+  height: 60px;
+  opacity: 0;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  background: #33292a;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  padding-top: 65px;
+  width: 200px;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+.menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+}
+
+.menu li a:hover {
+  background: #644b4f;
+}
+
+.hamburger {
+  position: relative;
+  width: 38px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  right: 0;
+  background: #ffffff;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.hamburger::before {
+  top: -10px;
+  width: 38px;
+}
+
+.hamburger::after {
+  top: 10px;
+  width: 38px;
+}
+
+.toggle-menu {
+  position: absolute;
+  width: 38px;
+  height: 100%;
+  z-index: 3;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.navigation input:checked ~ .hamburger {
+  background: transparent;
+}
+
+.navigation input:checked ~ .hamburger::before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.navigation input:checked ~ .hamburger::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.navigation input:checked ~ .menu {
+  right: 0;
+  transition: 0.3s;
+}
+
+/*header obrázek*/
+
+.hp-container {
+  height: 100vh;
+  background-image: url("/01header.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/*header heading*/
+
+.hp-container h1 {
+  color: #ffffff;
+  position: absolute;
+  right: 30px;
+  bottom: 38px;
+  text-align: right;
+}
+
+.break-point::after {
+  content: "\a";
+  white-space: pre;
+}
+
+/*-----AAAAA    BBBB   OOOOO  U   U  TTTTT
+------A      A   B   B  O   O  U   U    T
+-----A       A  BBBB   O   O  U   U    T
+----AAAAAAA A  B   B  O   O  U   U    T
+---A       A  BBBB   O   O  U   U    T
+--A       A  B   B  O   O  U   U    T
+-A       A  BBBB   OOOOO   UUU     T*/
+
+.art-au p {
+  padding-bottom: 20px;
+}
+
+/*-----W       W   W       W   DDDD
+------W       W   W       W   D   D
+-----W       W   W       W   D   D
+----W   W   W   W   W   W   D   D
+---W   W   W   W   W   W   D   D
+--W   W   W   W   W   W   D   D
+--W     W    W     W    DDDD*/
+
+.icon-container {
+  max-width: 80px;
+}
+
+.sec-wwd {
+  text-align: center;
+  background-color: #33292a;
+}
+
+.art-wwd {
+  padding-bottom: 55px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.icon-container svg {
+  padding-bottom: 12px;
+}
+
+/*---TTTTTTT  RRRRR  III  PPPP   SSSS
+-------T     R    R  I   P   P S
+------T     RRRRR   I   PPPP   SSS
+-----T     R   R   I   P          S
+----T     R    R III  P      S   S*/
+
+.art-ot {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ot-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+}
+
+.trip-img img {
+  vertical-align: top;
+}
+
+.ot-heading-container h2 {
+  padding: 5%;
+}
+
+/*-----W       W   TTTTT   GGGG
+------W       W     T    G
+-----W       W     T    G  GG
+----W   W   W     T    G   G
+---W   W   W     T    G   G
+--W   W   W     T    G   G
+--W   W W      T     GGGG*/
+
+.sec-wtg {
+  background-color: #644b4f;
+}
+
+.btn a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #000000;
+  background-color: #f2f2f2;
+  padding: 13px 20px;
+}
+
+.btn a:hover {
+  color: #33292a;
+  background-color: #ffffff;
+}
+
+/*----RRRRR   EEEEE  V       V  III  EEEEE  W       W  SSSS
+-----R    R  E      V       V   I   E      W       W S
+----RRRRR   EEE     V     V    I   EEE    W   W   W   SSS
+---R   R   E         V   V     I   E        W W W        S
+--R    R  E          V V      I   E        W W W         S
+-R     R EEEEE       V      III  EEEEE     W W    S S S */
+
+.sec-rev {
+  text-align: center;
+}
+
+.rev-p1,
+.rev-p2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rev-img1-container,
+.rev-img2-container {
+  width: 20%;
+  min-width: 100px;
+}
+
+.rev-img1-container img,
+.rev-img2-container img {
+  width: 100%;
+
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/*----FFFFFF   OOOOO  OOOOO  TTTTT  EEEEE  RRRRR
+-----F        O   O  O   O    T    E      R    R
+----FFFF     O   O  O   O    T    EEE    RRRRR
+---F        O   O  O   O    T    E      R   R
+--F        O   O  O   O    T    E      R    R
+-F        OOOOO  OOOOO    T    EEEEE  R     R */
+
+.sec-pic {
+  display: flex;
+  flex-direction: column;
+}
+
+.pic-container img {
+  vertical-align: top;
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  background-color: #333333;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer a {
+  color: #efa69d;
+  padding-bottom: 10px;
+}
+
+.footer a:hover {
+  color: #e9877b;
+}
+
+/*----M           M  EEEEE  DDDDD    III    A
+-----MM         MM  E      D    D    I    A A 
+----M M       M M  EEE    D    D    I   AAAAA
+---M  M     M  M  E      D    D    I  A     A 
+--M   M   M   M  E      D    D    I A       A
+-M    M M    M  EEEEE  DDDDD    IIIA        A*/
+
+@media screen and (min-width: 768px) {
+  /*Multiples*/
+
+  .pdng {
+    padding: 100px 15%;
+  }
+
+  main h2 {
+    padding-bottom: 25px;
+  }
+
+  /*---H     H  EEEEE  A       DDDD   EEEEE  RRRRR
+-----H     H  E      A A     D   D  E      R    R
+----HHHHHHH  EEE   AAAAA    D   D  EEE    RRRRR
+---H     H  E     A     A   D   D  E      R   R
+--H     H  E    A       A  D   D  E      R    R
+-H     H  EEE A         A DDDD   EEEEE  R     R*/
+
+  /*navigace*/
+
+  .hamburger,
+  .toggle-menu {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .menu li {
+    min-width: 155px;
+    width: calc(100% / 5 - 50px);
+  }
+
+  .menu li a {
+    text-align: center;
+  }
+
+  /*header heading*/
+
+  .hp-container h1 {
+    font-size: 60px;
+    bottom: 75px;
+    right: 15%;
+    transition: 0.3s;
+  }
+
+  /*-----AAAAA    BBBB   OOOOO  U   U  TTTTT
+------A      A   B   B  O   O  U   U    T
+-----A       A  BBBB   O   O  U   U    T
+----AAAAAAA A  B   B  O   O  U   U    T
+---A       A  BBBB   O   O  U   U    T
+--A       A  B   B  O   O  U   U    T
+-A       A  BBBB   OOOOO   UUU     T*/
+
+  .sec-au {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .art-au,
+  .au-pic-container {
+    flex-basis: 50%;
+  }
+
+  .au-pic-container img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /*---W       W   W       W   DDDD
+------W       W   W       W   D   D
+-----W       W   W       W   D   D
+----W   W   W   W   W   W   D   D
+---W   W   W   W   W   W   D   D
+--W   W   W   W   W   W   D   D
+--W     W    W     W    DDDD*/
+
+  .art-wwd {
+    padding-bottom: 100px;
+  }
+
+  .icons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /*-TTTTTTT  RRRRR  III  PPPP   SSSS
+-------T     R    R  I   P   P S
+------T     RRRRR   I   PPPP   SSS
+-----T     R   R   I   P          S
+----T     R    R III  P      S   S*/
+
+  .art-ot {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .art-ot img {
+    height: 100%;
+  }
+
+  .basis3 {
+    flex-basis: calc(100% / 3 - 20px / 3);
+  }
+
+  .ot-heading-container {
+    margin-bottom: 0;
+  }
+
+  /*----W       W   TTTTT   GGGG
+------W       W     T    G
+-----W       W     T    G  GG
+----W   W   W     T    G   G
+---W   W   W     T    G   G
+--W   W   W     T    G   G
+--W   W W      T     GGGG*/
+
+  .art-wtg {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .art-wtg h2 {
+    flex-basis: calc(25% - 10px);
+  }
+
+  .wtg-p {
+    flex-basis: calc(75% - 10px);
+  }
+
+  /*--RRRRR   EEEEE  V       V  III  EEEEE  W       W  SSSS
+-----R    R  E      V       V   I   E      W       W S
+----RRRRR   EEE     V     V    I   EEE    W   W   W   SSS
+---R   R   E         V   V     I   E        W W W        S
+--R    R  E          V V      I   E        W W W         S
+-R     R EEEEE       V      III  EEEEE     W W    S S S */
+
+  .width50 {
+    width: 50%;
+  }
+
+  .art-rev {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rev-p {
+    display: flex;
+    gap: 100px;
+  }
+
+  .rev-img1-container,
+  .rev-img2-container {
+    max-width: 200px;
+  }
+  /*--FFFFFF   OOOOO  OOOOO  TTTTT  EEEEE  RRRRR
+-----F        O   O  O   O    T    E      R    R
+----FFFF     O   O  O   O    T    EEE    RRRRR
+---F        O   O  O   O    T    E      R   R
+--F        O   O  O   O    T    E      R    R
+-F        OOOOO  OOOOO    T    EEEEE  R     R */
+
+  .sec-pic {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .pic-container {
+    flex-basis: 50%;
+  }
+}
